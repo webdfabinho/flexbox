@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink</title>
+    <style>
+         .flex-container{
+            max-width: 350px;
+            border: 2px solid red;
+            display: flex;
+        }
+
+        .item{
+            background-color: blue;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            
+        }
+
+        .s-0{
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+
+        .fg-0{
+            flex-grow: 0;
+        }
+
+        .s-1{
+            flex-shrink: 1;
+            flex-basis: 200px;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .s-2{
+            flex-shrink: 2;
+            flex-basis: 200px;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .s-3{
+            flex-shrink: 3;
+            flex-basis: 200px;
+        }
+
+        .fg-3{
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shrink</h1>
+    <h2>Flex Shrink 1</h2>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+    <h2>Flex Shrink 1</h2>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">As tecnologias de informação</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+    <h2>Flex Shrink 0 basis 100px</h2>
+    <div class="flex-container">
+        <div class="item s-0 fg-1">A</div>
+        <div class="item s-0 fg-1">As tecnologias.</div>
+        <div class="item s-0 fg-1">C</div>
+        <div class="item s-0 fg-1">D tecnologias</div>
+        <div class="item s-0 fg-1">E</div>
+    </div>
+    <h2>Flex Shrink MIX</h2>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-2 fg-1">As tecnologias de informação</div>
+        <div class="item s-2 fg-1">C</div>
+        <div class="item s-3 fg-1">D</div>
+        <div class="item s-2 fg-1">E</div>
+    </div>
+</body>
+</html>
