@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis</title>
+    <style>
+        .flex-container{
+            max-width: 500px;
+            border: 2px solid red;
+            display: flex;
+        }
+
+        .item{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            margin: 5px;
+            
+        }
+
+        .bauto{
+            flex-basis: auto;
+        }
+
+        .fg-0{
+            flex-grow: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+        
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .b-0{
+            flex-basis: 0;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex Grow</h1>
+    <h2>Auto</h2>
+    <div class="flex-container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-2">BIC</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-1">DJF</div>
+    </div>
+    <h2>Zero</h2>
+    <div class="flex-container">
+        <div class="item b-0 fg-1">ABCDEFGHIJKLMNOPQ</div>
+        <div class="item b-0 fg-1">BIC</div>
+        <div class="item b-0 fg-1">C</div>
+        <div class="item b-0 fg-1">DJF</div>
+    </div>
+    <h2>Basis + Width</h2>
+    <div class="flex-container">
+        <div class="item w100 fg-2">ABCDEF</div>
+        <div class="item w100 fg-2">BIC</div>
+        <div class="item w100 fg-2">C</div>
+        <div class="item w100 fg-2">DJF</div>
+    </div>
+</body>
+</html>
