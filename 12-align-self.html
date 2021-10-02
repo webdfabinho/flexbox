@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self</title>
+
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 2px solid red;
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .align-container{
+            align-items: flex-end;
+        }
+
+        .item{
+            background-color: blue;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px; 
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ROW</h1>
+    <section class="flex-container align-container">
+        <div class="item center">ABC</div>
+        <div class="item start">123</div>
+        <div class="item stretch">O Sucesso de nossa Carreira depende de Nós! E mais ninguém!</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item auto">ABC</div>
+        <div class="item auto">123</div>
+        <div class="item auto">O Sucesso de nossa Carreira depende de Nós! E mais ninguém!</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">ABC</div>
+        <div class="item start">123</div>
+        <div class="item end">CORINTHIANS</div>
+        <div class="item stretch">O Sucesso de nossa Carreira depende de Nós!</div>
+    </section>
+
+    <h1>COLUMN</h1>
+
+    <section class="flex-container align-container direction">
+        <div class="item auto">ABC</div>
+        <div class="item auto">123</div>
+        <div class="item auto">O Sucesso de nossa Carreira depende de Nós!</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">ABC</div>
+        <div class="item start">123</div>
+        <div class="item stretch">O Sucesso de nossa Carreira depende de Nós!</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">ABC</div>
+        <div class="item start">123</div>
+        <div class="item end">CORINTHIANS</div>
+        <div class="item stretch">O Sucesso de nossa Carreira depende de Nós!</div>
+    </section>
+    
+    
+</body>
+</html>
